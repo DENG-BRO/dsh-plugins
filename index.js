@@ -144,6 +144,73 @@ export function apply(ctx, config) {
           return
         }
 
+        if (route === '/market/list') {
+          const market = ctx.get('pluginMarket')
+          if (!market || typeof market.listIndexes !== 'function') {
+            send(200, { hasMarket: false })
+            return
+          }
+          send(200, { hasMarket: true, indexes: market.listIndexes() })
+          return
+        }
+
+        if (route === '/market/add' && req.method === 'POST') {
+          const market = ctx.get('pluginMarket')
+          if (!market || typeof market.setIndexes !== 'function') {
+            send(200, { hasMarket: false })
+            return
+          }
+          const raw = await readBody(req)
+          let url = ''
+          try { url = String(JSON.parse(raw)?.url ?? '').trim() } catch { /* ignore */ }
+          if (!url) { send(400, { message: 'url required' }); return }
+          const current = market.listIndexes().map((summary) => summary.url)
+          const next = [...current, url]
+          await market.setIndexes(next)
+          send(200, { saved: true, indexes: market.listIndexes() })
+          return
+        }
+
+        if (route === '/market/set' && req.method === 'POST') {
+          const market = ctx.get('pluginMarket')
+          if (!market || typeof market.setIndexes !== 'function') {
+            send(200, { hasMarket: false })
+            return
+          }
+          const raw = await readBody(req)
+          let urls = []
+          try { urls = JSON.parse(raw)?.urls ?? [] } catch { /* ignore */ }
+          if (!Array.isArray(urls) || urls.some((u) => typeof u !== 'string')) {
+            send(400, { message: 'urls must be string[]' })
+            return
+          }
+          await market.setIndexes(urls)
+          send(200, { saved: true, indexes: market.listIndexes() })
+          return
+        }
+
+        if (route === '/market/search') {
+          const market = ctx.get('pluginMarket')
+          if (!market || typeof market.search !== 'function') {
+            send(200, { hasMarket: false })
+            return
+          }
+          const indexUrl = url.searchParams.get('url') ?? ''
+          if (!indexUrl) { send(400, { message: 'url required' }); return }
+          try {
+            const result = await market.search(indexUrl, {
+              sort: { kind: 'index' },
+              offset: 0,
+              limit: 20,
+              refresh: true,
+            })
+            send(200, { ok: true, result })
+          } catch (error) {
+            send(200, { ok: false, message: String(error?.message ?? error) })
+          }
+          return
+        }
+
         if (route === '/value') {
           if (!settings.apiKey) {
             send(200, { configured: false })
