@@ -65,3 +65,16 @@ https://raw.githubusercontent.com/DENG-BRO/dsh-plugins/main/index.json
 - 余额只读,不会产生费用,也不会泄露账号信息;
 - 插件通过本机回环地址(127.0.0.1)与 Harness 通信,只在本机可用。
 
+
+## 国内网络注意
+
+安装时若提示 git 下载失败(GitHub 连接被重置/超时),先执行一次:
+
+```
+git config --global url."https://ghproxy.net/https://github.com/".insteadOf "https://github.com/"
+git config --global url."https://github.com/".pushInsteadOf "https://github.com/"
+```
+
+第一条让下载走镜像,第二条保证你自己 push 代码仍走直连。配置一次即可,之后安装不再报错。
+
+索引地址本身走 jsDelivr CDN,国内可直接访问。
