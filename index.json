@@ -1,0 +1,59 @@
+{
+  "format": 1,
+  "title": {
+    "en": "My DSH Plugins",
+    "zh": "我的 DSH 插件库"
+  },
+  "description": {
+    "en": "Plugins shared by king hotker.",
+    "zh": "king hotker 分享的 DeepSeek Harness 插件。"
+  },
+  "metadata": {
+    "categories": {
+      "tools": { "title": { "en": "Tools", "zh": "工具" } }
+    },
+    "labels": {},
+    "sortKeys": {}
+  },
+  "plugins": [
+    {
+      "name": "@local/api-balance-widget",
+      "title": {
+        "en": "DeepSeek API Balance",
+        "zh": "DeepSeek API 余额"
+      },
+      "description": {
+        "en": "Shows the remaining DeepSeek account balance beside the composer.",
+        "zh": "在输入框旁显示 DeepSeek 账户余额。"
+      },
+      "icon": "https://raw.githubusercontent.com/REPLACE_USER/REPLACE_REPO/main/api-balance/icon.svg",
+      "author": "king hotker",
+      "homepage": "https://github.com/REPLACE_USER/REPLACE_REPO",
+      "repository": {
+        "url": "https://github.com/REPLACE_USER/REPLACE_REPO",
+        "directory": "api-balance"
+      },
+      "metadata": {
+        "category": "tools",
+        "keywords": ["deepseek", "balance", "api"],
+        "labels": [],
+        "sortKeys": {}
+      },
+      "versions": [
+        {
+          "version": "1.0.0",
+          "publishTimestamp": 1763742000,
+          "source": {
+            "type": "git",
+            "url": "https://github.com/REPLACE_USER/REPLACE_REPO.git",
+            "commit": "REPLACE_WITH_40_HEX_COMMIT",
+            "path": "api-balance"
+          },
+          "engines": {
+            "dsh": ">=0.2.2"
+          }
+        }
+      ]
+    }
+  ]
+}

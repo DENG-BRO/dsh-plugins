@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "DeepSeek API 余额",
+    "description": "在输入框下方显示 DeepSeek API 账户的剩余额度，并支持就地填写 API Key。",
+    "detail": "docs/DETAIL.md"
+  }
+}

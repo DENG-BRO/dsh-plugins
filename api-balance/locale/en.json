@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "DeepSeek API Balance",
+    "description": "Shows the remaining DeepSeek API credit balance under the composer and lets you save an API key in place.",
+    "detail": "docs/DETAIL.md"
+  }
+}
