@@ -50,7 +50,7 @@
             "path": "api-balance"
           },
           "engines": {
-            "dsh": ">=0.2.2"
+            "dsh": ">=0.2.2-rc.0"
           }
         }
       ]
