@@ -26,7 +26,7 @@
         "en": "Shows the remaining DeepSeek account balance beside the composer.",
         "zh": "在输入框旁显示 DeepSeek 账户余额。"
       },
-      "icon": "https://raw.githubusercontent.com/DENG-BRO/dsh-plugins/main/api-balance/icon.svg",
+      "icon": "https://cdn.jsdelivr.net/gh/DENG-BRO/dsh-plugins@main/api-balance/icon.svg",
       "author": "king hotker",
       "homepage": "https://github.com/DENG-BRO/dsh-plugins",
       "repository": {
