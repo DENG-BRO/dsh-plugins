@@ -1,8 +1,8 @@
 {
   "format": 1,
   "title": {
-    "en": "My DSH Plugins",
-    "zh": "我的 DSH 插件库"
+    "en": "king hotker's DSH Plugins",
+    "zh": "king hotker 的 DSH 插件库"
   },
   "description": {
     "en": "Plugins shared by king hotker.",
@@ -26,11 +26,11 @@
         "en": "Shows the remaining DeepSeek account balance beside the composer.",
         "zh": "在输入框旁显示 DeepSeek 账户余额。"
       },
-      "icon": "https://raw.githubusercontent.com/REPLACE_USER/REPLACE_REPO/main/api-balance/icon.svg",
+      "icon": "https://raw.githubusercontent.com/DENG-BRO/dsh-plugins/main/api-balance/icon.svg",
       "author": "king hotker",
-      "homepage": "https://github.com/REPLACE_USER/REPLACE_REPO",
+      "homepage": "https://github.com/DENG-BRO/dsh-plugins",
       "repository": {
-        "url": "https://github.com/REPLACE_USER/REPLACE_REPO",
+        "url": "https://github.com/DENG-BRO/dsh-plugins",
         "directory": "api-balance"
       },
       "metadata": {
@@ -45,8 +45,8 @@
           "publishTimestamp": 1763742000,
           "source": {
             "type": "git",
-            "url": "https://github.com/REPLACE_USER/REPLACE_REPO.git",
-            "commit": "REPLACE_WITH_40_HEX_COMMIT",
+            "url": "https://github.com/DENG-BRO/dsh-plugins.git",
+            "commit": "a3f55ac776e2398b3a82b745df168e01fc565b86",
             "path": "api-balance"
           },
           "engines": {
