@@ -8,7 +8,13 @@ king hotker 的 DeepSeek Harness 插件库（索引地址方式）。
 
 ## 安装方式
 
-在 DeepSeek Harness 的 **发现/插件市场 → 添加索引** 中填入：
+在 DeepSeek Harness 的 **发现/插件市场 → 添加索引** 中填入（国内可用 jsDelivr 镜像）：
+
+```
+https://cdn.jsdelivr.net/gh/DENG-BRO/dsh-plugins@main/index.json
+```
+
+备用（GitHub 原地址，网络允许时也可用）：
 
 ```
 https://raw.githubusercontent.com/DENG-BRO/dsh-plugins/main/index.json
