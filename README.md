@@ -1,4 +1,4 @@
-﻿# DSH Plugins
+# DSH Plugins
 
 king hotker 的 DeepSeek Harness 插件库（索引地址方式）。
 
